@@ -84,6 +84,15 @@ p, ul { margin: 0 0 1rem; }
 }
 dl dt { font-weight: 600; margin-top: 1.25rem; }
 dl dd { margin: .25rem 0 0; }
+.shots { display: grid; gap: 1.5rem; margin: 2rem 0; }
+.shots figure { margin: 0; text-align: center; }
+.shots img {
+  display: block; width: 100%; height: auto;
+  border-radius: 14px; border: 1px solid var(--border);
+  box-shadow: 0 8px 30px rgba(0,0,0,.12);
+}
+.shots figure.phone img { max-width: 18rem; margin: 0 auto; border-radius: 28px; }
+.shots figcaption { margin-top: .6rem; color: var(--muted); font-weight: 600; }
 footer.site {
   padding-top: 1.5rem;
   padding-bottom: 2rem;

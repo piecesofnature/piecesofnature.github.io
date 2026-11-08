@@ -1,0 +1,94 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f7f5ef;
+  --surface: #ffffff;
+  --text: #1f2a24;
+  --muted: #5b6760;
+  --accent: #2f6b4f;
+  --border: #dfdbd0;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121714;
+    --surface: #1b221e;
+    --text: #e8ece8;
+    --muted: #a3ada6;
+    --accent: #8cc9a8;
+    --border: #2c3530;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+a { color: var(--accent); }
+header.site, main, footer.site {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+header.site {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .5rem 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+header.site .brand {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+}
+header.site .brand img { width: 32px; height: 32px; border-radius: 7px; }
+header.site nav { display: flex; gap: 1rem; }
+header.site nav a { text-decoration: none; }
+header.site nav a[aria-current="page"] { color: var(--text); font-weight: 600; }
+main { padding-top: 2rem; padding-bottom: 3rem; }
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 .5rem; }
+h2 { font-size: 1.25rem; margin: 2rem 0 .5rem; }
+p, ul { margin: 0 0 1rem; }
+.lead { font-size: 1.2rem; color: var(--muted); }
+.meta { color: var(--muted); font-size: .95rem; }
+.hero { text-align: center; padding: 1.5rem 0 1rem; }
+.hero img {
+  width: 160px; height: 160px; border-radius: 36px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.18);
+}
+.hero h1 { margin-top: 1.25rem; }
+.badge {
+  display: inline-block;
+  margin-top: .5rem;
+  padding: .55rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  font-weight: 600;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.25rem 1.25rem .25rem;
+  margin: 1.5rem 0;
+}
+dl dt { font-weight: 600; margin-top: 1.25rem; }
+dl dd { margin: .25rem 0 0; }
+footer.site {
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: .9rem;
+}
+footer.site a { color: var(--muted); }

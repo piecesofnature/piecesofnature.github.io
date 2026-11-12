@@ -75,6 +75,13 @@ p, ul { margin: 0 0 1rem; }
   color: var(--muted);
   font-weight: 600;
 }
+a.badge.store {
+  background: var(--accent);
+  border-color: transparent;
+  color: var(--bg);
+  text-decoration: none;
+}
+a.badge.store:hover { filter: brightness(1.08); }
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
